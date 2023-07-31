@@ -1,4 +1,5 @@
-export { buildPlugins } from './buildPlugins';
-export { buidLoaders } from './buildLoaders';
+export { buildPlugins } from "./buildPlugins";
+export { buidLoaders } from "./buildLoaders";
 export { buildResolvers } from "./buildResolvers";
 export { buildWebpackConfig } from "./buildWebpackConfig";
+export { buildDevServer } from "./devServer";

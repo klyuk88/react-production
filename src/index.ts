@@ -1,6 +1,5 @@
 const test = (a: string) => {
   console.log(a);
-  
-}
+};
 
-test('23')
+test("33");
