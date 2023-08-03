@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve",
+    "dev": "npx webpack serve",
     "build:prod": "npx webpack --env mode=production",
     "build:dev": "npx webpack --env mode=development port=3000"
   },
