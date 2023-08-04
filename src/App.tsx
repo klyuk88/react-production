@@ -1,10 +1,12 @@
-import "./style";
-import Counter from "./components/Counter";
+import "./app.scss";
+import Counter from "./components/Counter/Counter";
 export default function App () {
     return (
         <div className="app">
-            Hello from App!!!
-            <Counter/>
+            <div className="container">
+                <Counter/>
+            </div>
+
         </div>
     )
 }

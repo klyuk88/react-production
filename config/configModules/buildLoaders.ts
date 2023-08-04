@@ -18,8 +18,8 @@ export const buidLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
         loader: "css-loader",
         options: {
           modules: {
-            auto: /\.module\.\w+$/i,
-            localIdentName: "[path][name]__[local]--[hash:base64:5]"
+            auto: true,
+            localIdentName: isDev ? "[local]--[hash:base64:8]" : "[hash:base64:8]"
           },
         },
       },
