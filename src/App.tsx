@@ -1,15 +1,15 @@
-import "./app.scss";
-import Main from "./pages/main";
-import About from "./pages/about";
+import "./assets/scss/index.scss";
+import {lazy, Suspense} from 'react';
+const Main = lazy(() => import('./pages/main'))
+const About = lazy(() => import('./pages/about'))
 import {
-    createBrowserRouter,
     Link, Route, Routes
 } from "react-router-dom";
 
 export default function App () {
     return (
         <div className="app">
-            <div className="container">
+            <div className="container mx-auto">
                 <ul>
                     <li>
                         <Link to="/">
@@ -20,11 +20,12 @@ export default function App () {
                         </Link>
                     </li>
                 </ul>
-                <Routes>
-                    <Route path={'/'} element={<Main/>}></Route>
-                    <Route path={'/about'} element={<About/>}></Route>
-                </Routes>
-                
+                <Suspense fallback={'...Loading'}>
+                    <Routes>
+                        <Route path={'/'} element={<Main/>}></Route>
+                        <Route path={'/about'} element={<About/>}></Route>
+                    </Routes>
+                </Suspense>
             </div>
 
         </div>

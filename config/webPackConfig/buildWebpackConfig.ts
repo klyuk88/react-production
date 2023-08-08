@@ -3,8 +3,8 @@ import {
   buildPlugins,
   buildResolvers,
   buildDevServer,
-} from "../configModules";
-import type { BuildOptions } from "../types/config";
+} from "./";
+import type { BuildOptions } from "./types";
 import webpack from "webpack";
 
 export const buildWebpackConfig = (

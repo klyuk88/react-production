@@ -1,5 +1,5 @@
 export default function About() {
     return (
-        <h1>About page</h1>
+        <h1 className={'text-2xl'}>About page</h1>
     )
 }

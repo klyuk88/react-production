@@ -1,5 +1,9 @@
 export default function Main() {
     return (
-        <h1>Main page</h1>
+        <div>
+            <h1 className='text-3xl'>Main page</h1>
+        </div>
+
+
     )
 }

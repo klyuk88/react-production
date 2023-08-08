@@ -1,6 +1,6 @@
 import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { BuildOptions } from "../types/config";
+import { BuildOptions } from "./types";
 
 export const buidLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
   const { isDev } = options;
@@ -23,7 +23,19 @@ export const buidLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
           },
         },
       },
-      "sass-loader",
+      {
+        loader: "postcss-loader",
+        options: {
+          postcssOptions: {
+            plugins: [
+              [
+                "postcss-preset-env",
+                "autoprefixer",
+              ],
+            ],
+          },
+        },
+      },
     ]
   };
 
